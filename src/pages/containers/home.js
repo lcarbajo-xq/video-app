@@ -24,11 +24,10 @@ class Home extends Component {
 	}
 
 	render() {
-		<div>Llegue</div>
 			return (
 				<HandleError>
 						<HomeLayout>
-						<Related />
+							<Related />
 							<Categories
 								categories={this.props.data.categories}
 								handleOpenModal={this.handleOpenModal}/>
