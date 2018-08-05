@@ -53,21 +53,6 @@ class VideoPlayer extends Component {
   }
   handleVolumeChange = (event) => {
     this.video.volume = event.target.value;
-    this.setState({
-      silence: false,
-    })
-  }
-  handleVolumeClick = (event) => {
-    if (!this.state.silence) {
-      this.video.volume = 0;
-      this.setState({
-        silence: true,
-      })
-    } else {
-      this.setState ({
-        silence: false,
-      })
-    }
   }
   handleFullScreenClick = (event) => {
       if (!document.webkitIsFullScreen) {
@@ -75,6 +60,9 @@ class VideoPlayer extends Component {
       } else {
         document.webkitExitFullscreen();
       }
+  }
+  handleVolumeClick = (event) => {
+      this.video.muted = !this.video.muted;
   }
   setRef = (element) => {
     this.player = element;
@@ -98,6 +86,7 @@ class VideoPlayer extends Component {
               value={this.state.currentVideoTime}
               handleProgressChange={this.handleProgressChange}/>
             <Volume
+              volumeValue={this.state.volumeValue}
               handleVolumeChange={this.handleVolumeChange}
               handleVolumeClick={this.handleVolumeClick}/>
             <FullScreen

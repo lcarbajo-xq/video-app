@@ -10,11 +10,6 @@
 
 }
 
-.VolumeButton {
-  background-color: transparent;
-  background: rgba(0,0,0,.7);
-}
-
 .Volume-range {
   transform: rotate(-90deg);
   transform-origin: left bottom;
@@ -28,7 +23,7 @@
   border-radius: 0 20px 20px 0;
 }
 .Volume input {
-  cursor: grab;
+  cursor: drag;
   background: blue;
   border: 1px solid blue;
 }

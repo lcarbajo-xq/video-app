@@ -4,10 +4,14 @@ import './volume.css';
 
 function Volume (props) {
   return (
-    <div className="Volume" onClick={props.handleVolumeClick}>
-      <VolumeIcon
-        color="white"
-        size={25} />
+    <div className="Volume">
+      <div
+        onClick={props.handleVolumeClick}>
+        <VolumeIcon
+          color="white"
+          size={25}/>
+          />
+        </div>
       <input className="Volume-range"
         type="range"
         min={0}

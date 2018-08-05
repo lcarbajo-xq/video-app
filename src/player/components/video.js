@@ -7,7 +7,7 @@ class Video extends Component {
       this.video.play()
     } else {
       this.video.pause()
-    }
+    }//this.video.volume
   }
   setRef = (element) => {
     this.video = element;
